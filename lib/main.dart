@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: AppThemes.lt,
       builder: EasyLoading.init(),
       initialBinding: AuthBindings(),
-      themeMode: Auth,
+      // themeMode: Auth,
       darkTheme: AppThemes.dk,
       home: const AuthPage(),
     );
