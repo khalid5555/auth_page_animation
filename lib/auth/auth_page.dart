@@ -12,7 +12,6 @@ import '../widget/sign_up_form.dart';
 import '../widget/social_buttons.dart';
 import 'auth_controller.dart';
 
-
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
 
@@ -52,8 +51,8 @@ class _AuthPageState extends State<AuthPage>
 
   @override
   void dispose() {
-    _animationController.dispose();
     super.dispose();
+    _animationController.dispose();
     controller.email.dispose();
     controller.name.dispose();
     controller.password.dispose();
@@ -81,7 +80,7 @@ class _AuthPageState extends State<AuthPage>
                         duration: defaultDuration,
                         width: size.width * 0.90,
                         height: size.height,
-                        left: controller.showSignUp ? -size.width * 0.78 : 0,
+                        left: controller.showSignUp ? -size.width / 0.8 : 0,
                         child: Container(
                           padding: const EdgeInsets.only(right: 7),
                           color: AppColors.darkYellow,
@@ -97,7 +96,7 @@ class _AuthPageState extends State<AuthPage>
                             ? size.width * 0.12
                             : size.width * 0.90,
                         child: Container(
-                          color: AppColors.signupBg,
+                          color: AppColors.kPrColor,
                           child: SignUpForm(),
                         ),
                       ),
@@ -108,7 +107,7 @@ class _AuthPageState extends State<AuthPage>
                         right: controller.showSignUp
                             ? -size.width * 0.06
                             : size.width * 0.06,
-                        top: size.height * 0.06,
+                        top: size.height * 0.02,
                         child: CircleAvatar(
                           radius: 90,
                           backgroundColor: Colors.white70,
@@ -119,7 +118,7 @@ class _AuthPageState extends State<AuthPage>
                               width: size.height * .2,
                               height: size.height * .18,
                               color: controller.showSignUp
-                                  ? AppColors.signupBg
+                                  ? AppColors.darkYellow
                                   : AppColors.kPrColor,
                             ),
                           ),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/auth/auth_controller.dart';
 
-
 import '../utils/app_images.dart';
 
 class SocialButtons extends StatelessWidget {
@@ -12,7 +11,7 @@ class SocialButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: MediaQuery.of(context).size.width * .2,
       decoration: BoxDecoration(
         color: AppColors.kreColor,
         borderRadius: BorderRadius.only(
@@ -24,21 +23,24 @@ class SocialButtons extends StatelessWidget {
               : const Radius.circular(0),
         ),
       ),
-      padding: const EdgeInsets.only(top: 12, bottom: 6),
+      padding: const EdgeInsets.only(top: 10, bottom: 6),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
             AppImages.google,
-            width: 35,
+            width: 37,
             height: 20,
             fit: BoxFit.cover,
           ),
-          Center(
+          const Center(
             child: Text(
-              'Google'.toUpperCase(),
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              'Google',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: AppColors.kPrColor),
             ),
           ),
         ],

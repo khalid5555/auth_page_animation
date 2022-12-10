@@ -89,18 +89,7 @@ TextStyle get headingStyle {
 }
 
 //!   Variable const
-const kProductsCollection = 'Products';
-const kUserCollection = 'users';
-const kProductimages = 'Productimages';
-const kProductcategory = 'Productcategory';
-const kProductPrice = 'Productprice';
-const kProductName = 'Productname';
-const kProductDescription = 'Productdescription';
-const kProductid = 'Productid';
-const kJackets = 'jackets';
-const kTrousers = 'trousers';
-const kTshirts = 't-shirts';
-const kShoes = 'shoes';
+
 
 const LinearGradient mainButton = LinearGradient(colors: [
   Color.fromRGBO(236, 60, 3, 1),
